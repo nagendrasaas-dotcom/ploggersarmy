@@ -52,7 +52,7 @@ function Partner() {
               { name: "company", label: "Organisation", required: true, half: true },
               { name: "email", label: "Work email", type: "email", required: true, half: true },
               { name: "phone", label: "Phone", type: "tel", half: true },
-              { name: "format", label: "Interested in", type: "select", options: FORMATS.map((f) => f[0]), required: true, half: true },
+              { name: "format", label: "Interested in", type: "select", options: FORMATS.map((f) => f[0]!), required: true, half: true },
               { name: "size", label: "Team size", type: "select", options: ["Under 25", "25–100", "100–500", "500+"], half: true },
               { name: "message", label: "Tell us about your goals", type: "textarea" },
             ]}

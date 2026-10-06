@@ -251,10 +251,10 @@ function Index() {
         <p className="mt-6 text-xs text-muted-foreground">Illustrative photos — swap in TIPA's own drive photography.</p>
         <Dialog open={lightbox !== null} onOpenChange={(o) => !o && setLightbox(null)}>
           <DialogContent className="max-w-5xl border-0 bg-ink p-0 [&>button]:hidden">
-            <DialogTitle className="sr-only">{lightbox !== null ? GALLERY[lightbox].alt : "Photo"}</DialogTitle>
+            <DialogTitle className="sr-only">{lightbox !== null ? GALLERY[lightbox]!.alt : "Photo"}</DialogTitle>
             {lightbox !== null && (
               <div className="relative">
-                <img src={GALLERY[lightbox].src} alt={GALLERY[lightbox].alt} className="max-h-[85vh] w-full object-contain" />
+                <img src={GALLERY[lightbox]!.src} alt={GALLERY[lightbox]!.alt} className="max-h-[85vh] w-full object-contain" />
                 <button onClick={() => setLightbox(null)} aria-label="Close" className="absolute right-3 top-3 grid h-10 w-10 place-items-center bg-ink text-ink-foreground">
                   <X className="h-5 w-5" />
                 </button>
